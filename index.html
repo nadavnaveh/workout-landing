@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אימונים אישיים - הדרך שלך להצלחה</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        /* Variables */
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #64748b;
+            --background: #f8fafc;
+            --text: #1e293b;
+            --text-light: #64748b;
+        }
+
+        /* Global Styles */
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(45deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h2 {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background-color: #22c55e;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #16a34a;
+            transform: translateY(-2px);
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background: var(--background);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 0;
+            background: var(--background);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 4rem 0;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial {
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background: var(--background);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Form */
+        .contact {
+            padding: 4rem 0;
+            background: var(--background);
+        }
+
+        .form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.375rem;
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            margin: 1rem 0;
+        }
+
+        .social-links a {
+            color: white;
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>הגיע הזמן להתאמן חכם יותר</h1>
+            <h2>אימונים אישיים מותאמים בדיוק בשבילך, עם תוצאות שנשארות לתמיד</h2>
+            <a href="#contact" class="cta-button">קבל אימון ניסיון חינם</a>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2>איך זה עובד?</h2>
+            <div class="steps">
+                <div class="step">
+                    <h3>1. פגישת היכרות</h3>
+                    <p>נפגש לשיחת היכרות, נבין את המטרות שלך ונבנה תוכנית אימונים מותאמת אישית</p>
+                </div>
+                <div class="step">
+                    <h3>2. תוכנית אישית</h3>
+                    <p>נבנה יחד תוכנית אימונים שמתאימה בדיוק לצרכים ולמטרות שלך</p>
+                </div>
+                <div class="step">
+                    <h3>3. ליווי צמוד</h3>
+                    <p>נלווה אותך לאורך כל הדרך עם מעקב צמוד, התאמות ותמיכה מקצועית</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2>למה לבחור בנו?</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <h3>מאמנים מוסמכים</h3>
+                    <p>צוות המאמנים שלנו מוסמך ובעל ניסיון רב בליווי אישי</p>
+                </div>
+                <div class="feature">
+                    <h3>סביבה פרטית</h3>
+                    <p>חדר כושר פרטי ואינטימי, בלי תורים ובלי הסחות דעת</p>
+                </div>
+                <div class="feature">
+                    <h3>תוצאות מוכחות</h3>
+                    <p>מאות מתאמנים מרוצים שהגיעו ליעדים שלהם איתנו</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2>מה המתאמנים אומרים</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p>"האימונים האישיים שינו לי את החיים. ירדתי 15 קילו ואני מרגיש נהדר!"</p>
+                    <h4>יוסי כהן</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"סוף סוף מצאתי מקום שבאמת מקשיב לצרכים שלי ועוזר לי להשיג את המטרות"</p>
+                    <h4>רונית לוי</h4>
+                </div>
+                <div class="testimonial">
+                    <p>"המאמן האישי שלי פשוט מדהים. התוצאות מדברות בעד עצמן!"</p>
+                    <h4>דני אברהם</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2>צור קשר</h2>
+            <form class="form">
+                <div class="form-group">
+                    <label for="name">שם מלא</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">אימייל</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">הודעה</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">שלח</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="mailto:softwarecreatorsai@hotmail.com">אימייל</a>
+                <a href="#">אינסטגרם</a>
+                <a href="#">פייסבוק</a>
+            </div>
+            <p>© 2024 כל הזכויות שמורות</p>
+        </div>
+    </footer>
+</body>
+</html>
